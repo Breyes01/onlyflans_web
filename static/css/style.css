@@ -1,0 +1,27 @@
+body * {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Open Sans", sansserif;
+}
+
+header {
+  padding-bottom: 20px;
+}
+
+.only {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size:large;
+  font-style:normal;
+  color:rgb(97, 33, 199);
+}
+
+
+#flans {
+  font-family: "Margarine", sans-serif;
+  font-weight: 800;
+  font-size:xx-large;
+  font-style: oblique;
+}
+

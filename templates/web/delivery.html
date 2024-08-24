@@ -1,0 +1,51 @@
+{% extends '../layouts/base.html' %}
+    
+
+{% block title %}
+   OnlyFlans| Despacho 
+{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Información de despacho</h1>
+<h3 class="text-center mb-2">Despacho a comunas del Gran Concepción</h3>
+<div>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Comuna</th>
+            <th scope="col">Días</th>
+            <th scope="col">Costo despacho</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Concepción
+            </td>
+            <td>Lunes a sábado</td>
+            <td>$2.990</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Penco</td>
+            <td>Lunes a viernes</td>
+            <td>$3.990</td>
+          </tr>
+            <th scope="row">3</th>
+            <td>Talcahuano</td>
+            <td>Miércoles a viernes</td>
+            <td>$4.990</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>Tomé</td>
+            <td>Miércoles a viernes</td>
+            <td>$4.990</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+<img src="/static/img/Captura de pantalla 2024-07-16 171137.png" class="img-fluid" width="300px" height="200px"  alt="camion">
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends '../layouts/base.html' %}
+
+{% block title %}
+    Finalizar|Logout
+{% endblock %}
+
+{% block content %}
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container text-center">
+            <p>¡Sesión finalizada!</p>
+        </div>
+        <a href="{% url 'login' %}">Haga clic aquí para iniciar sesión nuevamente.</a>
+    </div>
+{% endblock %}

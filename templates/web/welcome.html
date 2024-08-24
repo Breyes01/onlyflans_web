@@ -1,0 +1,40 @@
+{% extends '../layouts/base.html' %}
+    
+
+{% block title %}
+   OnlyFlans| Bienvenido 
+{% endblock %}
+    
+
+{% block content %}
+    <h1 class="text-center">Los mejores flanes y cheesecakes de la ciudad</h1>
+    <div class="col">
+        <div class="h-100 p-5 bg-info-subtle text-dark rounded-3 mb-4 mt-2">
+            <h2>Bienvenid@ {{ user.get_username }}</h2>
+        </div>
+
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            {% for flan in flans %}
+                <div class="col-md-3">
+                    <div class="card" style="width: 18rem">
+                        <img src="{{ flan.image_url }}" class="card-img-top" alt="{{ flan.name }}" />
+                        <div class="card-body">
+                            <h5 class="card-title">{{ flan.name }}</h5>
+                            <p class="card-text">
+                            {{ flan.description }}
+                            </p>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item text-center text-dark">
+                                    <h3>{{ flan.price }}</h3>
+                                </li>
+                            </ul>
+                            <a href="#" class="btn btn-outline-info">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}  
+        </div>
+    </div>
+{% endblock %}

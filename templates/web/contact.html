@@ -1,0 +1,29 @@
+{% extends '../layouts/base.html' %}
+
+
+{% block title %}
+    Onlyflans|Contacto 
+{% endblock %}
+
+
+{% block content %}
+    <h1 class="mb-4">Página de Contacto</h1>
+    <a class="btn btn-warning mb-4" href="{% url 'list_contact_web' %}">Lista de contactos</a>
+    <form class="container border border-primary col-md-4" method="post">
+        {% csrf_token %}
+        <div class="col">
+            <label class="form-label" for="customer_name">Nombre</label>
+            <input class="form-control" type="text" name="customer_name" id="id_customer_name" required placeholder="Ingrese nombre">
+        </div>
+        <div class="col">
+            <label class="form-label" for="customer_email">Correo</label>
+            <input class="form-control" type="email" name="customer_email" id="id_customer_email" required placeholder="Ingrese correo">
+        </div>
+        <div class="col">
+            <label class="form-label" for="message">Mensaje</label>
+            <input class="form-control" type="text" name="message" id="id_message" required placeholder="Ingrese mensaje">
+        </div> 
+        <button class="btn btn-info mt-2 mb-2" type="submit">Registrar</button>
+    </form>
+{% endblock %}
+    

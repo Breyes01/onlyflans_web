@@ -1,0 +1,48 @@
+{% extends '../layouts/base.html' %}
+{% load static %}    
+
+{% block title %}
+   OnlyFlans| Index 
+{% endblock %}
+    
+
+{% block content %}
+<div class="container-fluid mt-2 mb-2">
+    <h1 class="text-center">Los mejores flanes y cheesecakes de la ciudad</h1>
+</div>
+    
+    <div class="container-fluid mb-1">
+        <div class="row">
+            {% for flan in flans %}
+                <div class="col-md-3">
+                    <div class="card" style="width: 18rem">
+                        <img src="{{ flan.image_url }}" class="card-img-top" alt="{{ flan.name }}" />
+                        <div class="card-body">
+                            <h5 class="card-title">{{ flan.name }}</h5>
+                            <p class="card-text">
+                                {{ flan.description }}
+                            </p>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item text-center text-dark">
+                                        <h3>{{ flan.price }}</h3>
+                                    </li>
+                                </ul>
+                            <a href="#" class="btn btn-outline-info">Comprar</a>
+                        </div>
+                    </div> 
+                </div>
+            {% endfor %}  
+        </div>
+    </div>
+
+
+<div class="card text-center">
+    <div class="card-header bg-info-subtle">
+      <h3>Postre del mes</h3>
+    </div>
+    <div class="card-body">
+      <h4 class="card-title">Cheesecake Oreo</h4>
+      <img src="/static/img/Oreo-cheesecake.jpg" style="width: 18rem" height="240px" width="100px" alt="Oreo-cheesecake">
+</div>
+{% endblock %}
+     

@@ -1,0 +1,31 @@
+{% extends '../layouts/base.html' %}
+
+{% block title %}
+    Onlyflans|Lista cotactos
+{% endblock %}
+
+
+{% block content %}
+    <h1 class="text-center">Lista de contactos</h1>
+    <div class="container-fluid">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Mensaje</th>
+              </tr>
+            </thead>
+            <tbody>
+                {%for contact in contacts %}
+                <tr>
+                  <td>{{ contact.customer_name }}</td>
+                  <td>{{ contact.customer_email }}</td>
+                  <td>{{ contact.message }}</td>
+                </tr>
+                {% endfor %}
+           
+            </tbody>
+          </table>
+    </div>
+{% endblock  %}
